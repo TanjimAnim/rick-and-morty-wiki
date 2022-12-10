@@ -1,4 +1,4 @@
-import { Box, Image, Text, chakra } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 //importing assets
 import backgroundImage from "../assets/Background.png";
 import backgroundImage2 from "../assets/Background2.png";
@@ -7,14 +7,9 @@ import StarMiddle from "../assets/StarMiddle.png";
 import StarRight from "../assets/StarRight.png";
 import SpiralImage from "../assets/Spiral.png";
 
-import logoImage from "../assets/Logo.png";
-import bubbleImage from "../assets/bubble.png";
 
-import rickHeadImage from "../assets/portal.png";
-import barImage from "../assets/bar.png";
-import portalGunImage from "../assets/Gun.png";
-import playIcon from "../assets/Vector.png";
-import Link from "next/link";
+//importing components
+import Header from "./header";
 
 export default function HomePage() {
   return (
@@ -40,17 +35,8 @@ export default function HomePage() {
         background="#2A3E84"
         filter="blur(175px)"
       />
-      <Box
-        id="logo"
-        zIndex={1}
-        position="absolute"
-        width="227px"
-        height="48px"
-        left="846px"
-        top="58px"
-      >
-        <Image src={logoImage.src} alt="rick-and-morty" />
-      </Box>
+
+      <Header />
       <Box
         id="Star-23"
         position="absolute"
