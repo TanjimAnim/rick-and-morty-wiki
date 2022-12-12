@@ -18,3 +18,23 @@ export type CharacterDataType = {
   url: string;
   created: string;
 };
+
+export type EpisodeDataType = {
+  id: number;
+  name: string;
+  air_data: string;
+  episode: string;
+  characters: string[];
+  url: string;
+  created: string;
+};
+
+export type LocationDataType = {
+  id: number;
+  name: string;
+  type: string;
+  dimension: string;
+  residents: string[];
+  url: string;
+  created: string;
+};
