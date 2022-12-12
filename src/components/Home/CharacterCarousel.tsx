@@ -7,6 +7,9 @@ import { CharacterDataType } from "../../types";
 //import assests
 import nextButtonImage from "../../assets/nextButton.png";
 
+//import style
+import styles from "../../../styles/Card.module.css";
+
 export default function CharacterCarousel() {
   const [data, setData] = useState<CharacterDataType[]>([]);
   const [error, setError] = useState(null);
@@ -124,15 +127,13 @@ export default function CharacterCarousel() {
             .filter((elem) => elem.id <= 7)
             .map((item) => {
               return (
-                <div
-                  style={{
-                    borderImageSource:
-                      "linear-gradient(331.82deg, rgba(132, 247, 41, 0.7) -5.31%, rgba(21, 191, 253, 0.7) 91.15%)",
-                    width: "290px",
-                    background: "rgba(255, 255, 255, 0.05)",
-                    backdropFilter: "blur(3.77917px)",
-                    borderRadius: "12.0933px",
-                    border: "0.76px solid",
+                <Box
+                  width="290px"
+                  className={styles.card}
+                  sx={{
+                    _before: {
+                      transform: "rotate(180deg)",
+                    },
                   }}
                 >
                   <Image
@@ -152,7 +153,7 @@ export default function CharacterCarousel() {
                   >
                     {item.name}
                   </Text>
-                </div>
+                </Box>
               );
             })}
         </Box>
