@@ -10,6 +10,8 @@ import SpiralImage from "../../assets/Spiral.png";
 //importing components
 import Header from "./header";
 import CharacterCarousel from "./CharacterCarousel";
+import LocationCarousel from "./LocationCarousel";
+import EpisodeCarousel from "./EpisodeCarousel";
 
 export default function HomePage() {
   return (
@@ -38,6 +40,8 @@ export default function HomePage() {
 
       <Header />
       <CharacterCarousel />
+      <EpisodeCarousel />
+      <LocationCarousel />
       <Box
         id="Star-23"
         position="absolute"
