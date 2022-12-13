@@ -38,3 +38,12 @@ export type LocationDataType = {
   url: string;
   created: string;
 };
+
+export type CharacterResponseDataType = {
+  info: {
+    count: number;
+    next: string;
+    pages: number;
+  };
+  results: CharacterDataType[];
+};
