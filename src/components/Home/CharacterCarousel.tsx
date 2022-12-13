@@ -1,4 +1,4 @@
-import { Box, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState, useRef, MutableRefObject } from "react";
 
@@ -9,6 +9,8 @@ import nextButtonImage from "../../assets/nextButton.png";
 
 //import style
 import styles from "../../../styles/Card.module.css";
+
+import slugify from "slugify";
 
 export default function CharacterCarousel() {
   const [data, setData] = useState<CharacterDataType[]>([]);
@@ -91,7 +93,7 @@ export default function CharacterCarousel() {
       <Box display="flex">
         {scrollX !== 0 && (
           <Button
-            onClick={() => slide(-50)}
+            onClick={() => slide(-100)}
             transform="rotate(180deg)"
             borderRadius="50%"
             width="1%"
@@ -135,6 +137,7 @@ export default function CharacterCarousel() {
                       transform: "rotate(180deg)",
                     },
                   }}
+                  key={item.id}
                 >
                   <Image
                     src={item.image}
@@ -144,22 +147,29 @@ export default function CharacterCarousel() {
                     marginTop="16px"
                     marginBottom="64px"
                   />
-                  <Text
-                    fontSize="16px"
-                    fontWeight={500}
-                    marginY="24px"
-                    marginLeft="16px"
-                    color="white"
+                  <Link
+                    href={`/characters/${item.id}/${slugify(item.name)}`}
+                    isExternal
                   >
-                    {item.name}
-                  </Text>
+                    <Text
+                      fontSize="16px"
+                      fontWeight={500}
+                      marginY="24px"
+                      marginLeft="16px"
+                      color="white"
+                      position="relative"
+                      zIndex={1}
+                    >
+                      {item.name}
+                    </Text>
+                  </Link>
                 </Box>
               );
             })}
         </Box>
         {!scrolEnd && (
           <Button
-            onClick={() => slide(+50)}
+            onClick={() => slide(+100)}
             width="1%"
             borderRadius="50%"
             marginTop="auto"
