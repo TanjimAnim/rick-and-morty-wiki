@@ -79,7 +79,7 @@ export default function LocationCarousel() {
       <Box display="flex">
         {scrollX !== 0 && (
           <Button
-            onClick={() => slide(-50)}
+            onClick={() => slide(-100)}
             transform="rotate(180deg)"
             borderRadius="50%"
             width="1%"
@@ -115,7 +115,7 @@ export default function LocationCarousel() {
             .filter((elem) => elem.id <= 7)
             .map((item) => {
               return (
-                <Box width="360px" className={styles.card}>
+                <Box width="360px" className={styles.card} key={item.id}>
                   <Text
                     fontSize="16px"
                     fontWeight={500}
@@ -141,7 +141,7 @@ export default function LocationCarousel() {
         </Box>
         {!scrolEnd && (
           <Button
-            onClick={() => slide(+50)}
+            onClick={() => slide(100)}
             width="1%"
             borderRadius="50%"
             marginTop="auto"

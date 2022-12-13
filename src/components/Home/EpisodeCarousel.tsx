@@ -79,7 +79,7 @@ export default function EpisodeCarousel() {
       <Box display="flex">
         {scrollX !== 0 && (
           <Button
-            onClick={() => slide(-50)}
+            onClick={() => slide(-100)}
             transform="rotate(180deg)"
             borderRadius="50%"
             width="1%"
@@ -115,7 +115,7 @@ export default function EpisodeCarousel() {
             .filter((elem) => elem.id <= 7)
             .map((item) => {
               return (
-                <Box className={styles.card} width="360px">
+                <Box className={styles.card} width="360px" key={item.id}>
                   <Text
                     fontSize="16px"
                     fontWeight={500}
