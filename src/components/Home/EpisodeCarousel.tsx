@@ -86,7 +86,7 @@ export default function EpisodeCarousel() {
             marginTop="auto"
             marginBottom="auto"
           >
-            <Image src={nextButtonImage.src} />
+            <Image src={nextButtonImage.src} alt="" />
           </Button>
         )}
         <Box
@@ -147,7 +147,7 @@ export default function EpisodeCarousel() {
             marginTop="auto"
             marginBottom="auto"
           >
-            <Image src={nextButtonImage.src} />
+            <Image src={nextButtonImage.src} alt="" />
           </Button>
         )}
       </Box>

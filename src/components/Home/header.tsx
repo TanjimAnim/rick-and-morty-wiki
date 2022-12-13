@@ -53,7 +53,7 @@ export default function Header() {
             <Text color="white">
               <chakra.span color="white">THE</chakra.span>
               <chakra.span whiteSpace="nowrap" display="inline-block">
-                <Image src={rickHeadImage.src} />
+                <Image src={rickHeadImage.src} alt="rick-head" />
               </chakra.span>
               <chakra.span fontStyle="normal">RICK &amp;</chakra.span>
             </Text>
@@ -71,15 +71,15 @@ export default function Header() {
           </Text>
 
           <Box position="absolute" top="-100px" left="-155px">
-            <Image src={bubbleImage.src} />
+            <Image src={bubbleImage.src} alt="" />
           </Box>
 
           <Box position="absolute" top="30px" right="6px">
-            <Image src={barImage.src} />
+            <Image src={barImage.src} alt="" />
           </Box>
 
           <Box position="absolute" top="52px" right="-335px">
-            <Image src={gunImage.src} />
+            <Image src={gunImage.src} alt="" />
           </Box>
         </Box>
       </Box>
@@ -103,7 +103,7 @@ export default function Header() {
             borderRadius="100px"
             cursor="pointer"
           >
-            <Image src={playIconImage.src} />
+            <Image src={playIconImage.src} alt="" />
             <Text
               width="119px"
               height="24px"

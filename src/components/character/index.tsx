@@ -59,7 +59,7 @@ export default function Character({
                       },
                     }}
                   >
-                    <Image src={item.image} />
+                    <Image src={item.image} alt="" />
                   </Box>
                 </Box>
               </Box>
@@ -77,7 +77,7 @@ export default function Character({
                       },
                     }}
                   >
-                    <Image src={heartImage.src} marginBottom="20px" />
+                    <Image src={heartImage.src} marginBottom="20px" alt="" />
                     <Text fontSize="16px">Status</Text>
                     <Text fontSize="20px">{item.status}</Text>
                   </Box>
@@ -93,7 +93,7 @@ export default function Character({
                       },
                     }}
                   >
-                    <Image src={speciesImage.src} marginBottom="20px" />
+                    <Image src={speciesImage.src} marginBottom="20px" alt="" />
                     <Text fontSize="16px">Species</Text>
                     <Text fontSize="20px">{item.species}</Text>
                   </Box>
@@ -109,7 +109,7 @@ export default function Character({
                       },
                     }}
                   >
-                    <Image src={genderImage.src} marginBottom="20px" />
+                    <Image src={genderImage.src} marginBottom="20px" alt="" />
                     <Text fontSize="16px">Gender</Text>
                     <Text fontSize="20px">{item.gender}</Text>
                   </Box>
@@ -127,11 +127,11 @@ export default function Character({
                     },
                   }}
                 >
-                  <Image src={planetImage.src} marginBottom="20px" />
+                  <Image src={planetImage.src} marginBottom="20px" alt="" />
                   <Text fontSize="16px">Origin</Text>
                   <Box display="flex" justifyContent="space-between">
                     <Text fontSize="30px">{item.origin.name}</Text>{" "}
-                    <Image src={externalLinkImage.src} width="24px" />{" "}
+                    <Image src={externalLinkImage.src} width="24px" alt="" />{" "}
                   </Box>
                 </Box>
                 <Box
@@ -147,11 +147,11 @@ export default function Character({
                     },
                   }}
                 >
-                  <Image src={locationImage.src} marginBottom="20px" />
+                  <Image src={locationImage.src} marginBottom="20px" alt="" />
                   <Text fontSize="16px">Last Known Location</Text>
                   <Box display="flex" justifyContent="space-between">
                     <Text fontSize="30px">{item.location.name}</Text>{" "}
-                    <Image src={externalLinkImage.src} width="24px" />{" "}
+                    <Image src={externalLinkImage.src} width="24px" alt="" />{" "}
                   </Box>
                 </Box>
                 <Box
@@ -166,12 +166,12 @@ export default function Character({
                     },
                   }}
                 >
-                  <Image src={playlistImage.src} marginBottom="20px" />
+                  <Image src={playlistImage.src} marginBottom="20px" alt="" />
                   <Text fontSize="16px">Episode(S)</Text>
 
-                  {item.episode.slice(0, 5).map((item) => {
+                  {item.episode.slice(0, 5).map((item, index) => {
                     return (
-                      <ul>
+                      <ul key={index}>
                         <Text fontSize="30px" fontWeight={600}>
                           {item}
                         </Text>

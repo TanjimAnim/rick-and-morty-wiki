@@ -100,7 +100,7 @@ export default function CharacterCarousel() {
             marginTop="auto"
             marginBottom="auto"
           >
-            <Image src={nextButtonImage.src} />
+            <Image src={nextButtonImage.src} alt="" />
           </Button>
         )}
         <Box
@@ -146,6 +146,7 @@ export default function CharacterCarousel() {
                     marginX="16px"
                     marginTop="16px"
                     marginBottom="64px"
+                    alt=""
                   />
                   <Link
                     href={`/characters/${item.id}/${slugify(item.name)}`}
@@ -175,7 +176,7 @@ export default function CharacterCarousel() {
             marginTop="auto"
             marginBottom="auto"
           >
-            <Image src={nextButtonImage.src} />
+            <Image src={nextButtonImage.src} alt="" />
           </Button>
         )}
       </Box>
