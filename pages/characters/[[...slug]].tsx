@@ -22,8 +22,6 @@ export default function CharacterPage({
 }) {
   const router = useRouter();
   const { slug } = router.query;
-  console.log(slug);
-  console.log(data);
 
   var characterData = data.results.filter((elem) => {
     if (slug) {
